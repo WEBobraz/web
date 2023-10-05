@@ -11,4 +11,15 @@ cannot be used outside of the block that it belongs to. // Modifier - can be
 used on a block or an element to indicate a change to the default // state of an
 object. // Bad code: // .large-hero h1 // font-weight: 300; // devServer: {
 static: { directory: path.join(__dirname, 'app'), }, hot: true, port: 3000,
-liveReload: false },
+liveReload: false }, // Different images for different resolutions
+<picture>
+  <source srcset="assets/images/hero--large.jpg" media="(min-width: 1380px)" />
+  <source srcset="assets/images/hero--medium.jpg" media="(min-width: 990px)" />
+  <source srcset="assets/images/hero--small.jpg" media="(min-width: 640px)" />
+  <img
+    src="assets/images/hero--smaller.jpg"
+    alt="Costal view of ocean and mountains"
+  />
+</picture>
+
+// Or combined method
