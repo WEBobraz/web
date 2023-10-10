@@ -1,4 +1,9 @@
 .row {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
   &__4 {
     float: left;
     width: 33.33%;
@@ -7,8 +12,4 @@
     float: left;
     width: 66.66%;
   }
-}
-
-.clear-me {
-  clear: both;
 }
