@@ -17,6 +17,10 @@
     &__medium-8--smaller {
       width: 63%;
     }
+
+    &__b-margin-until-medium {
+      margin-bottom: 0rem;
+    }
   }
 
   &--gutters > div {
@@ -24,5 +28,9 @@
   }
   &--gutters {
     margin-right: -65px;
+  }
+
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
   }
 }
