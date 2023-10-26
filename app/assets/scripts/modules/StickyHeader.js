@@ -51,10 +51,10 @@ class StickyHeader {
                     document.querySelector(matchingLink).classList.add('is-current-link')
             }
             // turns off link highlights when no element is visible
-            if (scrollPercent > 82 && this.scrollDirection == 'up') {
-                let matchingLink = el.getAttribute('data-matching-link')
-                document.querySelector(matchingLink).classList.remove('is-current-link')
+            else if (scrollPercent > 38 && this.scrollDirection == 'up') {
+                document.querySelector('#our-beginning-link').classList.remove('is-current-link');
             }
+
         }
     }
 }
