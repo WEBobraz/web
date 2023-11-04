@@ -1,27 +1,26 @@
-exports.handler = function(event, context, callback) {
+exports.handler = function (event, context, callback) {
     const secretContent = `
     <h3>Welcome To The Secret Area</h3>
-    <p>Here we can find some text</p>
+    <p>Here we can tell you that the sky is <strong>blue</strong>, and two plus two equals four.</p>
     `
-    
+  
     let body
-
+  
     if (event.body) {
-        body = JSON.parse(event.body)
+      body = JSON.parse(event.body)
     } else {
-        body = {}
+      body = {}
     }
-
+  
     if (body.password == "javascript") {
-        callback(null, {
-            statusCode: 200,
-            body: secretContent
-        })
+      callback(null, {
+        statusCode: 200,
+        body: secretContent
+      })
     } else {
-        callback(null, {
-            statusCode: 401
-        })
+      callback(null, {
+        statusCode: 401
+      })
     }
-
-    
-}
+  }
+  
